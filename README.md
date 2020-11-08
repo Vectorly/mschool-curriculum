@@ -15,7 +15,7 @@ Videos are the lowest subunit, and just have an ID assocated with it.
 
 # Videos
 
-The videos themselves are compiled in our own ".lrn" format. They can be played back with a Javascript player (see demo folder)*[]:
+The videos themselves are compiled in our own ".lrn" format. They can be played back with a Javascript player (see demo folder):
 
 The LRN files themselves are stored on AWS S3. The API for accessing a given video is
 
