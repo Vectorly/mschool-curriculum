@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+
+    <script type="application/javascript" src="vv.js" ></script>
+</head>
+<body>
+
+
+<div id="video">
+
+</div>
+
+
+</body>
+
+<script type="application/javascript">
+
+
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "demo.lrn", true);
+
+    xhttp.responseType = "arraybuffer";
+
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState === 4) {
+
+            var blob = new Blob([xhttp.response], {type: 'application/zip'});
+
+            vv.load(blob, 'video', function (video) {
+
+                console.log(vv);
+
+
+            });
+
+
+        }
+    };
+
+
+    xhttp.send();
+
+
+
+</script>
+</html>
